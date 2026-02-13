@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mizuake | Web Creator / Designer</title>
+    <meta name="description" content="Web Creator mizuakeのポートフォリオサイト。伝わるデザインで、ビジネスを前に進めます。">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Noto+Sans+JP:wght@400;700&family=Space+Grotesk:wght@300;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS読み込み -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- ナビゲーション -->
+    <header class="header">
+        <div class="header-container">
+            <a href="#home" class="logo">mizuake</a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#works" class="nav-link">WORKS</a></li>
+                    <li><a href="#about" class="nav-link">ABOUT</a></li>
+                    <li><a href="#skills" class="nav-link">SKILLS</a></li>
+                    <li><a href="#service" class="nav-link">SERVICE</a></li>
+                    <li><a href="#contact" class="nav-link">CONTACT</a></li>
+                </ul>
+                <button class="menu-toggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+        <div class="mobile-menu-overlay">
+            <ul class="mobile-nav-list">
+                <li><a href="#works">WORKS</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#skills">SKILLS</a></li>
+                <li><a href="#service">SERVICE</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- ヒーローセクション（ファーストビュー） -->
+    <section id="home" class="hero">
+        <canvas id="particle-canvas"></canvas>
+        <div class="hero-content">
+            <h1 class="hero-title"><span class="typing-text"></span><span class="cursor">|</span></h1>
+            <p class="hero-subtitle fade-in-up delay-1">Web Creator / Designer</p>
+            <p class="hero-desc fade-in-up delay-2">伝わるデザインで、ビジネスを前に進める。</p>
+        </div>
+        <a href="#works" class="scroll-down">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+    </section>
+
+    <!-- 制作実績セクション (WORKS) -->
+    <section id="works" class="section works">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">WORKS <span class="ja-title">制作実績</span></h2>
+                <p class="section-desc">業種・目的に合わせた最適なデザインをご提案します。</p>
+            </div>
+
+            <!-- フィルタリングボタン -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">ALL</button>
+                <button class="filter-btn" data-filter="cafe">飲食</button>
+                <button class="filter-btn" data-filter="salon">美容</button>
+                <button class="filter-btn" data-filter="clinic">医療</button>
+                <button class="filter-btn" data-filter="business">士業</button>
+                <button class="filter-btn" data-filter="fitness">フィットネス</button>
+                <button class="filter-btn" data-filter="sports">スポーツ</button>
+            </div>
+
+            <!-- 実績カードグリッド -->
+            <div class="works-grid">
+                <!-- 1. 日本拳法連盟 -->
+                <article class="work-card" data-category="sports">
+                    <div class="work-image-wrapper">
+                        <img src="images/valstra.png" alt="日本拳法連盟" class="work-image">
+                        <div class="work-overlay">
+                            <h3 class="overlay-title">日本拳法連盟</h3>
+                            <span class="work-tag">スポーツ団体</span>
+                            <span class="real-badge">★ 実案件</span>
+                            <a href="https://valstra.net/" target="_blank" rel="noopener noreferrer"
+                                class="view-btn">サイトを見る</a>
+                        </div>
+                    </div>
+                    <div class="work-info">
+                        <h3 class="work-title">日本拳法連盟</h3>
+                        <div class="work-meta">
+                            <span class="category-pill">スポーツ</span>
+                            <p class="work-role">デザイン / コーディング / レスポンシブ対応</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 2. Cafe Lumière -->
+                <article class="work-card" data-category="cafe">
+                    <div class="work-image-wrapper">
+                        <img src="images/cafe.png" alt="Cafe Lumière" class="work-image">
+                        <div class="work-overlay">
+                            <h3 class="overlay-title">Cafe Lumière</h3>
+                            <span class="work-tag">カフェ・飲食</span>
+                            <a href="https://mizuake01.github.io/cafe-lumiere/" target="_blank"
+                                rel="noopener noreferrer" class="view-btn">サイトを見る</a>
+                        </div>
+                    </div>
+                    <div class="work-info">
+                        <h3 class="work-title">Cafe Lumière</h3>
+                        <div class="work-meta">
+                            <span class="category-pill">飲食</span>
+                            <p class="work-role">デザイン / コーディング / SEO対策</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 3. Hair Salon NOIR -->
+                <article class="work-card" data-category="salon">
+                    <div class="work-image-wrapper">
+                        <img src="images/saron.png" alt="Hair Salon NOIR" class="work-image">
+                        <div class="work-overlay">
+                            <h3 class="overlay-title">Hair Salon NOIR</h3>
+                            <span class="work-tag">美容室・サロン</span>
+                            <a href="https://mizuake01.github.io/Hair-Salon-NOIR/" target="_blank"
+                                rel="noopener noreferrer" class="view-btn">サイトを見る</a>
+                        </div>
+                    </div>
+                    <div class="work-info">
+                        <h3 class="work-title">Hair Salon NOIR</h3>
+                        <div class="work-meta">
+                            <span class="category-pill">美容</span>
+                            <p class="work-role">デザイン / コーディング / SEO対策</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 4. そよ風整骨院 -->
+                <article class="work-card" data-category="clinic">
+                    <div class="work-image-wrapper">
+                        <img src="images/soyo.png" alt="そよ風整骨院" class="work-image">
+                        <div class="work-overlay">
+                            <h3 class="overlay-title">そよ風整骨院</h3>
+                            <span class="work-tag">整体・治療院</span>
+                            <a href="https://mizuake01.github.io/soyokaze/" target="_blank" rel="noopener noreferrer"
+                                class="view-btn">サイトを見る</a>
+                        </div>
+                    </div>
+                    <div class="work-info">
+                        <h3 class="work-title">そよ風整骨院</h3>
+                        <div class="work-meta">
+                            <span class="category-pill">医療</span>
+                            <p class="work-role">デザイン / コーディング / 構造化データ</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 5. 山田税理士事務所 -->
+                <article class="work-card" data-category="business">
+                    <div class="work-image-wrapper">
+                        <img src="images/kai.png" alt="山田税理士事務所" class="work-image">
+                        <div class="work-overlay">
+                            <h3 class="overlay-title">山田税理士事務所</h3>
+                            <span class="work-tag">士業</span>
+                            <a href="https://mizuake01.github.io/tax-accountant/" target="_blank"
+                                rel="noopener noreferrer" class="view-btn">サイトを見る</a>
+                        </div>
+                    </div>
+                    <div class="work-info">
+                        <h3 class="work-title">山田税理士事務所</h3>
+                        <div class="work-meta">
+                            <span class="category-pill">士業</span>
+                            <p class="work-role">フォーム実装 / 構造化データ</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 6. FIT BASE TOKYO -->
+                <article class="work-card" data-category="fitness">
+                    <div class="work-image-wrapper">
+                        <img src="images/zim.png" alt="FIT BASE TOKYO" class="work-image">
+                        <div class="work-overlay">
+                            <h3 class="overlay-title">FIT BASE TOKYO</h3>
+                            <span class="work-tag">パーソナルジム</span>
+                            <a href="https://mizuake01.github.io/FIT-BASE-TOKYO/" target="_blank"
+                                rel="noopener noreferrer" class="view-btn">サイトを見る</a>
+                        </div>
+                    </div>
+                    <div class="work-info">
+                        <h3 class="work-title">FIT BASE TOKYO</h3>
+                        <div class="work-meta">
+                            <span class="category-pill">フィットネス</span>
+                            <p class="work-role">フォーム実装 / 構造化データ</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 自己紹介セクション (ABOUT) -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title">ABOUT <span class="ja-title">自己紹介</span></h2>
+            <div class="about-content">
+                <div class="about-image-col">
+                    <div class="profile-image-wrapper">
+                        <img src="images/profile.png" alt="mizuake" class="profile-image">
+                    </div>
+                </div>
+                <div class="about-text-col">
+                    <h3 class="about-name">mizuake</h3>
+                    <p class="about-role">Web Creator / Designer</p>
+                    <p class="about-desc">
+                        商社での営業経験を活かし、『ビジネスの成果につながるWeb制作』をコンセプトに活動しています。
+                        お客様のターゲットに合わせたデザインと、集客につながるサイト設計を得意としています。
+                        飲食・美容・医療・士業・フィットネスなど、幅広い業種の制作実績があります。
+                        クライアント様の『想い』を形にし、ビジネスの成長をサポートすることが私の使命です。
+                    </p>
+                    <div class="about-stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-num">6+</span>
+                            <span class="stat-label">制作実績</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-num">5+</span>
+                            <span class="stat-label">対応業種</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-num">100%</span>
+                            <span class="stat-label">リピート率<small>※知人案件</small></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- スキルセクション (SKILLS) -->
+    <section id="skills" class="section skills">
+        <div class="container">
+            <h2 class="section-title">SKILLS <span class="ja-title">スキル・対応範囲</span></h2>
+
+            <div class="skills-wrapper">
+                <!-- 技術スキル -->
+                <div class="tech-skills">
+                    <h3 class="subsection-title">Technical Skills</h3>
+                    <div class="skill-bar-container">
+                        <div class="skill-item">
+                            <div class="skill-info"><span class="skill-name">HTML/CSS</span><span
+                                    class="skill-percent">90%</span></div>
+                            <div class="progress-bg">
+                                <div class="progress-bar" data-width="90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span class="skill-name">JavaScript</span><span
+                                    class="skill-percent">70%</span></div>
+                            <div class="progress-bg">
+                                <div class="progress-bar" data-width="70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span class="skill-name">Responsive Design</span><span
+                                    class="skill-percent">95%</span></div>
+                            <div class="progress-bg">
+                                <div class="progress-bar" data-width="95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span class="skill-name">SEO</span><span
+                                    class="skill-percent">80%</span></div>
+                            <div class="progress-bg">
+                                <div class="progress-bar" data-width="80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span class="skill-name">UI/UX Design</span><span
+                                    class="skill-percent">85%</span></div>
+                            <div class="progress-bg">
+                                <div class="progress-bar" data-width="85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span class="skill-name">WordPress</span><span
+                                    class="skill-percent">60%</span></div>
+                            <div class="progress-bg">
+                                <div class="progress-bar" data-width="60%"></div>
+                            </div>
+                            <small class="skill-note">※学習中</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 対応可能な業務 -->
+                <div class="service-capabilities">
+                    <h3 class="subsection-title">Capabilities</h3>
+                    <div class="capabilities-grid">
+                        <div class="cap-card">
+                            <div class="cap-icon">🎨</div>
+                            <div>
+                                <h4>Webデザイン</h4>
+                                <p>ターゲットに合わせたオリジナルデザイン</p>
+                            </div>
+                        </div>
+                        <div class="cap-card">
+                            <div class="cap-icon">💻</div>
+                            <div>
+                                <h4>コーディング</h4>
+                                <p>HTML/CSS/JSによるレスポンシブ対応</p>
+                            </div>
+                        </div>
+                        <div class="cap-card">
+                            <div class="cap-icon">📱</div>
+                            <div>
+                                <h4>スマホ最適化</h4>
+                                <p>モバイルファーストの設計・実装</p>
+                            </div>
+                        </div>
+                        <div class="cap-card">
+                            <div class="cap-icon">🔍</div>
+                            <div>
+                                <h4>SEO対策</h4>
+                                <p>検索エンジンに強いサイト構造の設計</p>
+                            </div>
+                        </div>
+                        <div class="cap-card">
+                            <div class="cap-icon">📝</div>
+                            <div>
+                                <h4>フォーム実装</h4>
+                                <p>お問い合わせ・予約フォームの設置</p>
+                            </div>
+                        </div>
+                        <div class="cap-card">
+                            <div class="cap-icon">📊</div>
+                            <div>
+                                <h4>アクセス解析</h4>
+                                <p>Analytics / Search Consoleの導入</p>
+                            </div>
+                        </div>
+                        <div class="cap-card">
+                            <div class="cap-icon">🗺</div>
+                            <div>
+                                <h4>MEO対策</h4>
+                                <p>GBPの最適化支援</p>
+                            </div>
+                        </div>
+                        <div class="cap-card">
+                            <div class="cap-icon">🔧</div>
+                            <div>
+                                <h4>保守・運用</h4>
+                                <p>サイト公開後の更新・修正対応</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- サービス・料金セクション (SERVICE) -->
+    <section id="service" class="section service">
+        <div class="container">
+            <h2 class="section-title">SERVICE <span class="ja-title">サービス・料金</span></h2>
+            <div class="pricing-grid">
+                <!-- カード1 -->
+                <div class="pricing-card">
+                    <h3 class="plan-name">ランディングページ制作</h3>
+                    <p class="plan-target">まずは1ページで集客を始めたい方</p>
+                    <div class="plan-price">¥50,000<span class="price-suffix">〜</span></div>
+                    <ul class="plan-features">
+                        <li>デザイン・コーディング</li>
+                        <li>レスポンシブ対応</li>
+                        <li>お問い合わせフォーム</li>
+                        <li>SEO基礎設定</li>
+                        <li>公開作業</li>
+                        <li>納期目安：1〜2週間</li>
+                    </ul>
+                </div>
+
+                <!-- カード2 (おすすめ) -->
+                <div class="pricing-card popular">
+                    <div class="popular-badge">POPULAR</div>
+                    <h3 class="plan-name">コーポレート・店舗サイト</h3>
+                    <p class="plan-target">本格的なホームページで信頼感を高めたい方</p>
+                    <div class="plan-price">¥100,000<span class="price-suffix">〜</span></div>
+                    <ul class="plan-features">
+                        <li>5ページ以内のサイト設計・制作</li>
+                        <li>レスポンシブ対応</li>
+                        <li>お問い合わせフォーム</li>
+                        <li>SEO基礎設定 / Analytics導入</li>
+                        <li>公開作業</li>
+                        <li>納品後1ヶ月間の修正対応</li>
+                        <li>納期目安：2〜4週間</li>
+                    </ul>
+                </div>
+
+                <!-- カード3 -->
+                <div class="pricing-card">
+                    <h3 class="plan-name">サイトリニューアル</h3>
+                    <p class="plan-target">今のサイトに不満がある、もっと集客したい方</p>
+                    <div class="plan-price">¥80,000<span class="price-suffix">〜</span></div>
+                    <ul class="plan-features">
+                        <li>既存サイトの分析・改善提案</li>
+                        <li>デザインリニューアル</li>
+                        <li>レスポンシブ対応</li>
+                        <li>SEO改善</li>
+                        <li>表示速度改善</li>
+                        <li>納期目安：2〜3週間</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pricing-note">
+                <p>※すべて税込価格です。内容・ページ数により変動します。まずはお気軽にご相談ください。</p>
+                <div class="options-list">
+                    <span class="option-tag">追加ページ: ¥15,000〜</span>
+                    <span class="option-tag">ロゴデザイン: ¥30,000〜</span>
+                    <span class="option-tag">撮影ディレクション: ¥20,000〜</span>
+                    <span class="option-tag">保守・運用: 月額¥3,000〜</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 制作の流れセクション (FLOW) -->
+    <section id="flow" class="section flow">
+        <div class="container">
+            <h2 class="section-title">FLOW <span class="ja-title">制作の流れ</span></h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-icon">✉️</div>
+                    <div class="timeline-content">
+                        <h4>STEP 01 お問い合わせ</h4>
+                        <p>まずはお気軽にフォームからご連絡ください。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">🗣</div>
+                    <div class="timeline-content">
+                        <h4>STEP 02 ヒアリング</h4>
+                        <p>ご要望・ターゲット・参考サイトなどを詳しくお伺いします。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">📄</div>
+                    <div class="timeline-content">
+                        <h4>STEP 03 ご提案・お見積り</h4>
+                        <p>サイト構成案とお見積りをご提示します。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">🎨</div>
+                    <div class="timeline-content">
+                        <h4>STEP 04 デザイン制作</h4>
+                        <p>トップページのデザイン案をお見せし、方向性を確認します。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">💻</div>
+                    <div class="timeline-content">
+                        <h4>STEP 05 実装</h4>
+                        <p>デザイン確定後、サイトを構築します。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">✅</div>
+                    <div class="timeline-content">
+                        <h4>STEP 06 確認・修正</h4>
+                        <p>テスト公開し、ご確認いただきます（修正2回まで含む）。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">🚀</div>
+                    <div class="timeline-content">
+                        <h4>STEP 07 納品・公開</h4>
+                        <p>本番公開＋納品後1ヶ月間の無料修正サポート。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- お問い合わせセクション (CONTACT) -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title">CONTACT <span class="ja-title">お問い合わせ</span></h2>
+            <p class="section-desc">ご相談・お見積りは無料です。お気軽にお問い合わせください。</p>
+
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>Contact Info</h3>
+                    <p class="contact-email">mizuake.hp@gmail.com</p>
+                    <p class="contact-hours">対応時間：10:00〜20:00</p>
+                    <small>確認次第ご連絡いたします。</small>
+                </div>
+
+                <form action="https://formspree.io/f/mreapjzr" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">お名前 <span class="required">*</span></label>
+                        <input type="text" id="name" name="name" required placeholder="山田 太郎">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">メールアドレス <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required placeholder="example@mail.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="company">会社名・屋号</label>
+                        <input type="text" id="company" name="company">
+                    </div>
+                    <div class="form-group">
+                        <label for="type">ご相談内容の種類</label>
+                        <select id="type" name="type">
+                            <option value="new">新規サイト制作</option>
+                            <option value="renewal">サイトリニューアル</option>
+                            <option value="lp">ランディングページ</option>
+                            <option value="other">その他</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="budget">ご予算</label>
+                        <select id="budget" name="budget">
+                            <option value="~50k">〜5万円</option>
+                            <option value="50k-100k">5〜10万円</option>
+                            <option value="100k-200k">10〜20万円</option>
+                            <option value="200k+">20万円以上</option>
+                            <option value="consult">相談して決めたい</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="deadline">ご希望納期</label>
+                        <select id="deadline" name="deadline">
+                            <option value="1month">1ヶ月以内</option>
+                            <option value="2months">2ヶ月以内</option>
+                            <option value="3months">3ヶ月以内</option>
+                            <option value="flexible">急ぎではない</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">詳細・ご要望 <span class="required">*</span></label>
+                        <textarea id="message" name="message" rows="5" required
+                            placeholder="お問い合わせ内容をご記入ください"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">送信する</button>
+                    <p class="form-status" style="display:none; margin-top:1rem; color:#00D4AA;">
+                        送信完了しました。2営業日以内にご返信いたします。</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p class="copyright">&copy; 2025 mizuake All Rights Reserved.</p>
+            <a href="#" class="back-to-top" aria-label="Top">↑</a>
+        </div>
+    </footer>
+
+    <!-- JS読み込み -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
